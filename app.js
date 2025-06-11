@@ -26,8 +26,7 @@ app.get('/limpieza', (req, res) => {
 });
 
 // Iniciar servidor
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 3000; // O cualquier otro puerto por defecto para tu desarrollo local
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
-    console.log('Abre tu navegador en: http://localhost:9000');
+    console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
