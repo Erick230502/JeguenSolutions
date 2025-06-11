@@ -216,7 +216,6 @@
     transform: translateX(0); 
 }
 
-/* CAMBIO CLAVE: Ajustar el ancho del texto *dentro* de los párrafos y alinearlo a la derecha/justificado */
 .about-text-box p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
@@ -724,132 +723,166 @@
 }
 
 
-    /* --- Media Queries para index.ejs (Responsividad del contenido) --- */
-    @media (max-width: 992px) {
-        .hero-content h1 {
-            font-size: 3.2rem;
-        }
-        .hero-content .hero-tagline {
-            font-size: 1.6rem;
-        }
-        .section-title {
-            font-size: 2rem;
-        }
-        
-        .about-text-box {
-            width: 60%;
-            padding: 2.5rem;
-        }
-        .service-card {
-            padding: 2rem;
-        }
-        .service-card .icon-large {
-            font-size: 3rem;
-        }
-        .philosophy-card h3 {
-            font-size: 1.6rem;
-        }
-        .philosophy-card .card-image {
-            height: 180px;
-        }
+/* --- Media Queries para index.ejs (Responsividad del contenido) --- */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+    .hero-content .hero-tagline {
+        font-size: 1.6rem;
+    }
+    .section-title {
+        font-size: 2rem;
     }
 
-    @media (max-width: 768px) {
-        .hero-section {
-            padding: 6rem 0;
-            min-height: 60vh;
-        }
-        .hero-content h1 {
-            font-size: 2.5rem;
-        }
-        .hero-content .hero-tagline {
-            font-size: 1.2rem;
-        }
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-        }
-        /* Ajuste para about-us-section en móvil */
-        .about-us-section {
-            min-height: 450px; 
-        }
-        .about-content-wrapper {
-            justify-content: center; 
-            padding: 2rem 15px; 
-        }
-        .about-text-box {
-            width: 90%; 
-            max-width: none; 
-            padding: 2rem;
-            text-align: center; 
-            position: relative; 
-            left: unset; 
-            height: auto; 
-            border-radius: var(--border-radius); 
-            top: unset;
-        }
-        .about-text-box h2.section-title {
-            text-align: center; /* Centra el título en móvil */
-        }
-        .about-text-box h2.section-title::after {
-            left: 50%; /* Centra la línea del título en móvil */
-            transform: translateX(-50%);
-        }
-        .philosophy-grid {
-            grid-template-columns: 1fr;
-        }
-        .philosophy-card {
-            width: 90%;
-            margin: 0 auto;
-        }
-        .philosophy-card h3::after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .philosophy-card ul {
-            text-align: left;
-        }
-        .service-cards-grid {
-            grid-template-columns: 1fr;
-        }
-        .service-card {
-            width: 90%;
-            margin: 0 auto;
-        }
-        .about-us-section, .services-overview-section, .cta-section, .philosophy-section {
-            padding: 3rem 0;
-        }
-        .cta-section h2 {
-            font-size: 2rem;
-        }
-        .cta-section p {
-            font-size: 1rem;
-        }
-        .philosophy-card .card-image {
-            height: 150px;
-        }
+    .about-text-box {
+        width: 60%; /* Ajuste para tabletas más grandes */
+        padding: 2.5rem;
+        /* Mantén el posicionamiento absoluto si funciona bien con el degradado */
+        /* Considera ajustar min-height si es necesario para esta resolución */
+    }
+    .about-text-box h2.section-title {
+        /* Puedes ajustar los márgenes para el título si la caja es más estrecha */
+        margin-left: 5rem; /* Ejemplo, ajústalo según el diseño */
+    }
+    .about-text-box h2.section-title::after {
+        margin-left: -5rem; /* Ejemplo, ajústalo según el diseño */
+    }
+    .about-text-box p {
+        font-size: 1.05rem; /* Ligeramente más pequeño que el escritorio */
+        max-width: 90%; /* Ajusta el ancho del párrafo */
     }
 
-    @media (max-width: 480px) {
-        .hero-content h1 {
-            font-size: 2rem;
-        }
-        .hero-content .hero-tagline {
-            font-size: 1rem;
-        }
-        .section-title {
-            font-size: 1.6rem;
-        }
-        .philosophy-card h3 {
-            font-size: 1.4rem;
-        }
-        .philosophy-card ul li {
-            font-size: 0.9rem;
-        }
-        .about-text-box {
-            padding: 1.5rem; 
-        }
+    .service-card {
+        padding: 2rem;
     }
+    .service-card .icon-large {
+        font-size: 3rem;
+    }
+    .philosophy-card h3 {
+        font-size: 1.6rem;
+    }
+    .philosophy-card .card-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 6rem 0;
+        min-height: 60vh;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content .hero-tagline {
+        font-size: 1.2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    /* Ajuste para about-us-section en móvil */
+    .about-us-section {
+        min-height: auto; /* Permite que la altura se ajuste al contenido en móvil */
+        padding-top: 3rem; /* Añade un poco de espacio arriba si es necesario */
+        padding-bottom: 3rem; /* Añade un poco de espacio abajo si es necesario */
+    }
+    .about-content-wrapper {
+        justify-content: center;
+        padding: 2rem 15px;
+        align-items: flex-start; /* Asegura que el texto inicie arriba */
+    }
+    .about-text-box {
+        width: 90%;
+        max-width: none;
+        padding: 2rem;
+        text-align: center;
+        position: relative; /* Muy importante para que no se posicione absolutamente */
+        left: unset; /* Reinicia la posición izquierda */
+        top: unset; /* Reinicia la posición superior */
+        min-height: auto; /* La altura se ajusta al contenido */
+        border-radius: var(--border-radius); /* Asegura esquinas redondeadas */
+        /* Los border-radius específicos se eliminan para que tome el valor por defecto */
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+        padding-top: 2rem; /* Ajusta el padding top para que sea consistente con el resto del padding */
+    }
+    .about-text-box h2.section-title {
+        text-align: center; /* Centra el título en móvil */
+        margin-left: 0; /* Elimina el margen izquierdo específico */
+        font-size: 1.6rem; /* Ajusta el tamaño de fuente del título para 768px */
+    }
+    .about-text-box h2.section-title::after {
+        left: 50%; /* Centra la línea del título en móvil */
+        transform: translateX(-50%);
+        margin-left: auto; /* Asegura que no tenga un margin-left negativo de antes */
+        margin-right: auto;
+    }
+    .about-text-box p {
+        font-size: 1rem; /* Reduce el tamaño de fuente de los párrafos */
+        max-width: 100%; /* Los párrafos ocupan todo el ancho disponible */
+        margin-left: 0; /* Elimina el margen izquierdo automático */
+        text-align: justify; /* Mantiene la justificación si es deseado, o cámbialo a 'left' */
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+    .philosophy-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .philosophy-card h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .philosophy-card ul {
+        text-align: left;
+    }
+    .service-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .about-us-section, .services-overview-section, .cta-section, .philosophy-section {
+        padding: 3rem 0;
+    }
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    .cta-section p {
+        font-size: 1rem;
+    }
+    .philosophy-card .card-image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content .hero-tagline {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .philosophy-card h3 {
+        font-size: 1.4rem;
+    }
+    .philosophy-card ul li {
+        font-size: 0.9rem;
+    }
+    .about-text-box {
+        padding: 1.5rem; /* Más pequeño para pantallas muy reducidas */
+    }
+}
 </style>
 </head>
 <body>
