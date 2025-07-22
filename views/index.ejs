@@ -20,8 +20,8 @@
 
     :root {
         --primary-color: #1a4f8a;
-        --secondary-color: #ff9900; 
-        --light-text-color: #ffffff; 
+        --secondary-color: #ff9500ff; 
+        --light-text-color: #f8f9fa; 
         --dark-text-color: #333333; 
         --background-light: #f8f9fa; 
         --border-radius: 8px;
@@ -86,17 +86,17 @@
 /* Hero Section */
 .hero-section {
     background: linear-gradient(var(--dark-blue-overlay), var(--dark-blue-overlay)),
-                url('/img/trabajando11.jpg') no-repeat center center/cover;
+                url('/img/proteccionCivil.jpg') no-repeat center center/cover;
     color: var(--light-text-color);
     padding: 6rem 0;
     text-align: center;
     display: flex;
-    /* align-items: center; /* REMUEVE O CAMBIA ESTO */
-    align-items: flex-start; /* CAMBIO CLAVE: Alinea el contenido arriba */
+    align-items: flex-start; 
     justify-content: center;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    margin-top: 30px;
 }
 
 .hero-content {
@@ -150,6 +150,150 @@
         background-color: var(--secondary-color);
         border-radius: 2px;
     }
+
+.special-showcase-section {
+    background-color: #f0f4f7; 
+    border-bottom: 2px solid #dae1e7; 
+    text-align: center; 
+}
+
+
+.intro-section {
+    margin-bottom: 60px;
+    margin-top: 160px;
+}
+
+.section-title-special {
+    font-size: 3em; 
+    color: #002244; 
+    margin-bottom: 20px;
+    font-weight: 800; 
+    letter-spacing: -0.5px; 
+    text-transform: uppercase; 
+}
+
+.special-intro {
+    font-size: 1.25em; 
+    color: #333;
+    max-width: 950px; 
+    margin: 0 auto 30px auto;
+    line-height: 1.7; 
+    font-weight: 400;
+    text-align: justify;
+}
+
+.special-items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    justify-content: center;
+    margin-top: 60px; 
+    margin-bottom: 40px;
+}
+
+.grid-title { 
+    width: 100%; 
+    font-size: 2.2em;
+    color: #003366;
+    margin-bottom: -10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.special-item {
+        background-color: var(--background-light);
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        padding: 2rem;
+        text-align: center;
+        transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: hidden; 
+}
+
+@media (min-width: 768px) {
+    .special-item {
+        flex-direction: row;
+        max-width: 90%; 
+    }
+}
+
+.special-item:hover {
+        transform: translateY(-8px) scale(1.02); 
+        box-shadow: 0 10px 55px rgba(0, 0, 0, 0.4); 
+}
+
+.special-item-img {
+    width: 100%;
+    height: 280px; /* Un poco más de altura para las imágenes */
+    object-fit: cover;
+    flex-shrink: 0;
+    border-bottom: 4px solid #0056b3; /* Un borde de color para destacar */
+}
+
+@media (min-width: 768px) {
+    .special-item-img {
+        width: 45%; /* La imagen toma un poco más de ancho */
+        height: auto;
+        max-height: 350px; /* Permitir que sea un poco más alta */
+        border-bottom: none; /* Quitar borde inferior */
+        border-right: 4px solid #0056b3; /* Borde lateral en escritorio */
+    }
+}
+
+.special-item-content {
+    padding: 30px; 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left; 
+}
+
+.special-item-content h3 {
+    font-size: 2em; 
+    color: #003366; 
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.special-item-content p {
+    font-size: 1.1em; /* Párrafos más grandes y legibles */
+    color: #444; /* Color de texto más oscuro */
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px; /* Más espacio debajo del párrafo */
+}
+
+.call-to-action {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px; /* Añade padding al botón/enlace */
+    background-color: #0056b3; /* Fondo azul para el CTA */
+    color: #ffffff; /* Texto blanco para el CTA */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    font-weight: 700; /* Texto en negrita para el CTA */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+}
+
+.call-to-action:hover {
+    background-color: #003d80; /* Azul más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el mouse */
+    text-decoration: none; /* Asegura que no se subraya */
+}
+
+/* Estilos de contenedor general para consistencia */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
 /* About Us Section - Nuevo Diseño con Imagen Full-Width y Degradado a la Izquierda */
 .about-us-section {
@@ -225,10 +369,10 @@
     text-align: justify; 
 }
 
-    /* Philosophy Section - Misión, Visión, Valores con Imágenes */
     .philosophy-section {
-        padding: 5rem 0;
-        background-color: white; /* Asegurado que el fondo es blanco */
+        margin-top: 70px;
+        margin-bottom: -70px;
+        background-color: white; 
     }
 
     .philosophy-grid {
@@ -340,89 +484,77 @@
 /* Commitment Section */
 .commitment-section {
     background-color: var(--primary-color);
-    padding: 1.5rem 0;
+    padding: 1.5rem 0; 
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: -50px;
+    margin-bottom: 30px; 
+    margin-top: -50px; 
     color: var(--light-text-color);
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     justify-content: center;
 }
 
-.commitment-title {
-    font-size: 2.5rem;
-    color: var(--light-text-color);
-    margin-bottom: 1.5rem;
-    font-weight: 450;
-    text-transform: uppercase;
-}
+.commitment-title { 
+     font-size: 2.5rem;  
+     color: var(--light-text-color); 
+     margin-bottom: 1.5rem; 
+     font-weight: 450; 
+     text-transform: uppercase; 
+ }
 
 .commitment-grid {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Esto es crucial para que los ítems se envuelvan a la siguiente línea */
-    gap: 0.8rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 0 1rem; /* Añade un poco de padding horizontal para evitar que toque los bordes en móviles */
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap;
+    gap: 0.8rem; 
+    font-size: 1.1rem; 
+    font-weight: 500; 
 }
 
 .commitment-item {
-    background-color: transparent;
-    border-radius: 0;
-    padding: 0;
-    font-size: inherit;
-    font-weight: inherit;
-    color: var(--light-text-color);
-    transition: none;
-    display: flex;
+    background-color: transparent; 
+    border-radius: 0; 
+    padding: 0; 
+    font-size: inherit; 
+    font-weight: inherit; 
+    color: var(--light-text-color); 
+    transition: none; 
+    display: flex; 
     align-items: center;
     justify-content: center;
-    white-space: nowrap; /* Mantiene el texto del ítem en una sola línea */
+    white-space: nowrap;
 }
 
 .commitment-item span {
-    margin: 0;
+    margin: 0; 
 }
 
 .commitment-item:hover {
-    background-color: transparent;
+    background-color: transparent; 
     color: var(--light-text-color);
     transform: none;
     cursor: default;
 }
 
 .separator {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5); 
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 0 0.5rem; /* Reducimos el padding horizontal del separador */
-    line-height: 1;
-    /* Considera que el separador puede no ser necesario si los elementos se apilan */
-    /* Para pantallas muy pequeñas, podríamos ocultarlo o ajustarlo más */
+    padding: 0 5rem; 
+    line-height: 1; 
 }
 
 /* Estilos para la sección de servicios (general) */
 .services-overview-section {
-    padding: 4rem 0;
+    margin-bottom: 80px;
+    margi-top: 20px;
 }
 
 /* Estilos para el contenedor del carrusel */
 .services-carousel {
     width: 100%;
     margin-top: 3rem; 
-}
-
-/* Estilos para el párrafo introductorio de servicios */
-.services-intro {
-    text-align: justify; 
-    margin-bottom: 2rem; 
-    max-width: 1100px; 
-    margin-left: auto; 
-    margin-right: auto; 
-    padding: 0 15px; 
 }
 
 /* Estilos para cada slide/tarjeta de servicio */
@@ -463,7 +595,7 @@
     display: flex;
     align-items: flex-end; 
     justify-content: center; 
-    text-align: justify;
+    text-align: center;
     cursor: pointer;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
@@ -736,275 +868,178 @@
 }
 
 
-/* --- Media Queries para index.ejs (Responsividad del contenido) --- */
-@media (max-width: 992px) {
-    .hero-content h1 {
-        font-size: 3.2rem;
-    }
-    .hero-content .hero-tagline {
-        font-size: 1.6rem;
-    }
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .about-text-box {
-        width: 60%; 
-        padding: 2.5rem;
-
-    }
-    .about-text-box h2.section-title {
-        /* Puedes ajustar los márgenes para el título si la caja es más estrecha */
-        margin-left: 5rem; /* Ejemplo, ajústalo según el diseño */
-    }
-    .about-text-box h2.section-title::after {
-        margin-left: -5rem; /* Ejemplo, ajústalo según el diseño */
-    }
-    .about-text-box p {
-        font-size: 1.05rem; /* Ligeramente más pequeño que el escritorio */
-        max-width: 90%; /* Ajusta el ancho del párrafo */
-    }
-
-    .service-card {
-        padding: 2rem;
-    }
-    .service-card .icon-large {
-        font-size: 3rem;
-    }
-    .philosophy-card h3 {
-        font-size: 1.6rem;
-    }
-    .philosophy-card .card-image {
-        height: 180px;
-    }
-    /* Ajustes para la sección de compromiso */
-    .commitment-title {
-        font-size: 2rem; /* Reduce el tamaño del título en tablets */
-    }
-    .commitment-grid {
-        font-size: 1rem; /* Reduce el tamaño de fuente de los ítems en tablets */
-        gap: 0.6rem; /* Ajusta el espacio entre ítems */
-    }
-    .separator {
-        padding: 0 0.4rem; /* Reduce aún más el padding del separador */
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 6rem 0;
-        min-height: 60vh;
-    }
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    .hero-content .hero-tagline {
-        font-size: 1.2rem;
-    }
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-    /* Ajuste para about-us-section en móvil */
-    .about-us-section {
-        min-height: auto; /* Permite que la altura se ajuste al contenido en móvil */
-        padding-top: 3rem; /* Añade un poco de espacio arriba si es necesario */
-        padding-bottom: 3rem; /* Añade un poco de espacio abajo si es necesario */
-    }
-    .about-content-wrapper {
-        justify-content: center;
-        padding: 2rem 15px;
-        align-items: flex-start; /* Asegura que el texto inicie arriba */
-    }
-    .about-text-box {
-        width: 90%;
-        max-width: none;
-        padding: 2rem;
-        text-align: center;
-        position: relative; /* Muy importante para que no se posicione absolutamente */
-        left: unset; /* Reinicia la posición izquierda */
-        top: unset; /* Reinicia la posición superior */
-        min-height: auto; /* La altura se ajusta al contenido */
-        border-radius: var(--border-radius); /* Asegura esquinas redondeadas */
-        /* Los border-radius específicos se eliminan para que tome el valor por defecto */
-        border-top-right-radius: var(--border-radius);
-        border-bottom-right-radius: var(--border-radius);
-        border-top-left-radius: var(--border-radius);
-        border-bottom-left-radius: var(--border-radius);
-        padding-top: 2rem; /* Ajusta el padding top para que sea consistente con el resto del padding */
-    }
-    .about-text-box h2.section-title {
-        text-align: center; /* Centra el título en móvil */
-        margin-left: 0; /* Elimina el margen izquierdo específico */
-        font-size: 1.6rem; /* Ajusta el tamaño de fuente del título para 768px */
-    }
-    .about-text-box h2.section-title::after {
-        left: 50%; /* Centra la línea del título en móvil */
-        transform: translateX(-50%);
-        margin-left: auto; /* Asegura que no tenga un margin-left negativo de antes */
-        margin-right: auto;
-    }
-    .about-text-box p {
-        font-size: 1rem; /* Reduce el tamaño de fuente de los párrafos */
-        max-width: 100%; /* Los párrafos ocupan todo el ancho disponible */
-        margin-left: 0; /* Elimina el margen izquierdo automático */
-        text-align: justify; /* Mantiene la justificación si es deseado, o cámbialo a 'left' */
+    /* --- Media Queries para index.ejs (Responsividad del contenido) --- */
+    @media (max-width: 992px) {
+        .hero-content h1 {
+            font-size: 3.2rem;
+        }
+        .hero-content .hero-tagline {
+            font-size: 1.6rem;
+        }
+        .section-title {
+            font-size: 2rem;
+        }
+        
+        .about-text-box {
+            width: 60%;
+            padding: 2.5rem;
+        }
+        .service-card {
+            padding: 2rem;
+        }
+        .service-card .icon-large {
+            font-size: 3rem;
+        }
+        .philosophy-card h3 {
+            font-size: 1.6rem;
+        }
+        .philosophy-card .card-image {
+            height: 180px;
+        }
     }
 
-    .philosophy-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 6rem 0;
+            min-height: 60vh;
+        }
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+        .hero-content .hero-tagline {
+            font-size: 1.2rem;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        /* Ajuste para about-us-section en móvil */
+        .about-us-section {
+            min-height: 450px; 
+        }
+        .about-content-wrapper {
+            justify-content: center; 
+            padding: 2rem 15px; 
+        }
+        .about-text-box {
+            width: 90%; 
+            max-width: none; 
+            padding: 2rem;
+            text-align: center; 
+            position: relative; 
+            left: unset; 
+            height: auto; 
+            border-radius: var(--border-radius); 
+            top: unset;
+        }
+        .about-text-box h2.section-title {
+            text-align: center; /* Centra el título en móvil */
+        }
+        .about-text-box h2.section-title::after {
+            left: 50%; /* Centra la línea del título en móvil */
+            transform: translateX(-50%);
+        }
+        .philosophy-grid {
+            grid-template-columns: 1fr;
+        }
+        .philosophy-card {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .philosophy-card h3::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .philosophy-card ul {
+            text-align: left;
+        }
+        .service-cards-grid {
+            grid-template-columns: 1fr;
+        }
+        .service-card {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .about-us-section, .services-overview-section, .cta-section, .philosophy-section {
+            padding: 3rem 0;
+        }
+        .cta-section h2 {
+            font-size: 2rem;
+        }
+        .cta-section p {
+            font-size: 1rem;
+        }
+        .philosophy-card .card-image {
+            height: 150px;
+        }
     }
-    .philosophy-card {
-        width: 90%;
-        margin: 0 auto;
-    }
-    .philosophy-card h3::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .philosophy-card ul {
-        text-align: left;
-    }
-    .service-cards-grid {
-        grid-template-columns: 1fr;
-    }
-    .service-card {
-        width: 90%;
-        margin: 0 auto;
-    }
-    .about-us-section, .services-overview-section, .cta-section, .philosophy-section {
-        padding: 3rem 0;
-    }
-    .cta-section h2 {
-        font-size: 2rem;
-    }
-    .cta-section p {
-        font-size: 1rem;
-    }
-    .philosophy-card .card-image {
-        height: 150px;
-    }
-    /* Ajustes para la sección de compromiso */
-    .commitment-section {
-        padding: 1rem 0; /* Reduce el padding vertical de la sección */
-        margin-top: -30px; /* Ajusta el margen superior si es necesario */
-    }
-    .commitment-title {
-        font-size: 1.8rem; /* Reduce el tamaño del título en móviles */
-        margin-bottom: 1rem;
-    }
-    .commitment-grid {
-        font-size: 0.95rem; /* Reduce el tamaño de fuente de los ítems */
-        gap: 0.5rem; /* Reduce el espacio entre ítems */
-        /* Flexbox ya está manejando el wrap */
-    }
-    .separator {
-        padding: 0 0.3rem; /* Menos padding para el separador */
-        font-size: 1rem; /* Reduce el tamaño del separador */
-    }
-}
 
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
+    @media (max-width: 480px) {
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+        .hero-content .hero-tagline {
+            font-size: 1rem;
+        }
+        .section-title {
+            font-size: 1.6rem;
+        }
+        .philosophy-card h3 {
+            font-size: 1.4rem;
+        }
+        .philosophy-card ul li {
+            font-size: 0.9rem;
+        }
+        .about-text-box {
+            padding: 1.5rem; 
+        }
     }
-    .hero-content .hero-tagline {
-        font-size: 1rem;
-    }
-    .section-title {
-        font-size: 1.6rem;
-    }
-    .philosophy-card h3 {
-        font-size: 1.4rem;
-    }
-    .philosophy-card ul li {
-        font-size: 0.9rem;
-    }
-    .about-text-box {
-        padding: 1.5rem; 
-    }
-    /* Ajustes para la sección de compromiso en los teléfonos más pequeños */
-    .commitment-title {
-        font-size: 1.5rem; /* Aún más pequeño para pantallas muy chicas */
-        margin-bottom: 0.8rem;
-    }
-    .commitment-grid {
-        font-size: 0.9rem; /* Tamaño de fuente más pequeño para los ítems */
-        gap: 0.4rem; /* Espacio mínimo entre ítems */
-    }
-    .separator {
-        padding: 0 0.2rem; /* Separa los ítems lo mínimo indispensable */
-        font-size: 0.9rem; /* Separádor más pequeño */
-        /* Opcional: Si quieres que cada item y separador se apile individualmente en pantallas muy pequeñas,
-           puedes considerar display: block; para .commitment-item y .separator aquí,
-           pero la forma actual con flex-wrap debería ser suficiente para la mayoría de los casos.
-           Si se ve muy amontonado, podrías incluso ocultar el separador si los ítems se apilan:
-           display: none;
-        */
-    }
-}
 </style>
 </head>
 <body>
 
-<section id="servicios" class="services-overview-section container" data-aos="fade-up" data-aos-delay="100">
-    <h2 class="section-title-services text-center">SERVICIOSSSS</h2>
-    <p class="services-intro text-center">En JEGUEN SOLUTIONS, ofrecemos higiene profunda y desinfección total con métodos avanzados y personal certificado. Transformamos tus espacios en ambientes verdaderamente saludables y productivos, asegurando un bienestar que notarás y querrás mantener.</p>
+<section id="specialized-services" class="special-showcase-section container" data-aos="fade-up" data-aos-delay="50">
+    <div class="intro-section">
+        <h2 class="section-title-special text-center">EQUIPAMIENTO ESTRATÉGICO</h2>
+        <p class="special-intro text-center">En <strong>JEGUEN SOLUTION</strong>, somos su socio clave para asegurar la máxima competitividad en sus proyectos. Presentamos soluciones de protección personal de alto rendimiento, <strong>diseñadas para superar cualquier obstáculo</strong>. Con nosotros, invierte en <strong>seguridad certificada, durabilidad superior y cumplimiento normativo garantizado</strong>.</p>
+    </div>
 
-    <div class="swiper mySwiper services-carousel">
-        <div class="swiper-wrapper">
-            <a href="/limpieza" class="swiper-slide service-slide">
-                <img src="/img/asesoria2.jpeg" alt="Asesoría" class="service-slide-img">
-                <div class="service-slide-overlay">
-                    <h3>Productos de limpieza</h3>
-                </div>
-            </a>
-            <a href="/limpieza" class="swiper-slide service-slide">
-                <img src="/img/serviciosLim.jpeg" alt="Instalación" class="service-slide-img">
-                <div class="service-slide-overlay">
-                    <h3>Servicios de limpieza</h3>
-                </div>
-            </a>
-            <a href="/limpieza" class="swiper-slide service-slide">
-                <img src="/img/mantenimiento.jpeg" alt="Mantenimiento" class="service-slide-img">
-                <div class="service-slide-overlay">
-                    <h3>Mantenimiento</h3>
-                </div>
-            </a>
-            <a href="/limpieza" class="swiper-slide service-slide">
-                <img src="/img/fumigacion.jpeg" alt="Diseño y desarrollo de sistemas" class="service-slide-img">
-                <div class="service-slide-overlay">
-                    <h3>Fumigación</h3>
-                </div>
-            </a>
-            <a href="/limpieza" class="swiper-slide service-slide">
-                <img src="/img/limInf.jpeg" alt="Suministro de equipo" class="service-slide-img">
-                <div class="service-slide-overlay">
-                    <h3>Limpieza y desinfección</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+    <div class="special-items-grid">
+        <h2 class="grid-title">NUESTRAS SOLUCIONES DESTACADAS:</h2>
+        <a href="/proteccionCivil" class="special-item" data-aos="fade-right" data-aos-delay="150">
+            <img src="/img/impermeable.jpeg" alt="Impermeables Tipo Poncho para Licitaciones" class="special-item-img">
+            <div class="special-item-content">
+                <h3>Impermeables Tipo Poncho <br> para Operaciones Críticas</h3>
+                <p>Ofrecemos <strong>protección impermeable intransigente</strong> para personal operativo y de emergencia. Fabricados con <strong>materiales técnicos de alta especificación</strong>, nuestros ponchos aseguran <strong>cobertura total y libertad de movimiento</strong> en las condiciones más adversas, <strong>garantizando la continuidad operativa y la seguridad</strong> de su equipo.</p>
+                <span class="call-to-action">VER ESPECIFICACIONES TÉCNICAS Y CERTIFICACIONES &raquo;</span>
+            </div>
+        </a>
+        <a href="/proteccionCivil" class="special-item" data-aos="fade-left" data-aos-delay="250">
+            <img src="/img/chalecos.jpeg" alt="Chalecos para Brigadistas de Alta Visibilidad" class="special-item-img">
+            <div class="special-item-content">
+                <h3>Chalecos para Brigadistas <br> de Alta Visibilidad Certificada</h3>
+                <p>Nuestros chalecos brindan <strong>máxima visibilidad y seguridad activa</strong> para brigadistas y personal en entornos de alto riesgo. <strong>Cumplen con las normativas nacionales e internacionales más rigurosas</strong>, incorporando <strong>materiales reflectantes de calidad premium y diseño ergonómico</strong> para una identificación clara y <strong>protección efectiva en todo momento</strong>.</p>
+                <span class="call-to-action">VER ESPECIFICACIONES TÉCNICAS Y CERTIFICACIONES &raquo;</span>
+            </div>
+        </a>
     </div>
 </section>
 
  <section id="inicio" class="hero-section" data-aos="fade-up">
     <div class="hero-content container">
-        <h1 data-aos="fade-right" data-aos-delay="200">SOLUCIONES QUE TRANSFORMAN.</h1>
+        <h1 data-aos="fade-right" data-aos-delay="200">SOLUCIONES QUE TRANSFORMAN</h1>
         <p class="hero-tagline" data-aos="fade-left" data-aos-delay="400">RESULTADOS QUE MARCAN LA DIFERENCIA.</p>
     </div>
 </section>
 
 <section id="nosotros" class="about-us-section" data-aos="fade-up" data-aos-delay="100">
-    <img src="/img/nosotros1.jpg" alt="Equipo de Jeguen Solutions" class="background-image">
+    <img src="/img/nosotrosProteccionCivil.jpg" alt="Equipo de Jeguen Solutions" class="background-image">
     <div class="about-content-wrapper">
         <div class="about-text-box" data-aos="fade-right" data-aos-delay="200">
             <h2 class="section-title">Nosotros</h2>
-            <p>En JEGUEN SOLUTION, nos especializamos en ofrecer soluciones profesionales de limpieza, adaptadas a las necesidades de cada cliente.</p>
-            <p>Combinamos experiencia, compromiso y productos de alta calidad para garantizar espacios seguros y saludables.</p>
-            <p>Nuestro equipo está capacitado para brindar un servicio confiable, puntual y eficiente, con atención al detalle y un enfoque orientado a la satisfacción del cliente.</p>
+            <p>En JEGUEN SOLUTION, sabemos que tu bienestar y rendimiento dependen de contar con el equipo adecuado. Por eso, nos dedicamos a ofrecer soluciones integrales que te mantienen protegido, visible y cómodo, incluso en las condiciones más extremas.</p>
+            <p>Nuestro compromiso es equipar a quienes trabajan incansablemente en brigadas de emergencia, personal operativo y profesionales que realizan tareas al aire libre.</p>
+            <p>Brindamos la fiabilidad, seguridad y confianza que necesitas para concentrarte en tu labor esencial. Con JEGUEN SOLUTION, cuentas con el respaldo y la tranquilidad para enfrentar cualquier desafío, sabiendo que tu protección es nuestra prioridad.</p>
         </div>
     </div>
 </section>
@@ -1015,25 +1050,74 @@
         <div class="philosophy-card"> <img src="/img/mision.jpg" alt="Misión" class="card-image">
             <h3>Misión</h3>
             <ul>
-                <li>Brindar soluciones integrales de limpieza con productos de calidad y servicios profesionales, garantizando ambientes limpios, seguros y saludables.</li>
+                <li style="text-align: justify">Proveer equipamiento y servicios de vanguardia que aseguren la máxima protección y el desempeño óptimo en entornos críticos. Nos enfocamos en soluciones que cumplen rigurosamente con las especificaciones técnicas más exigentes, ofreciendo confiabilidad, eficacia y durabilidad para cada operación.</li>
             </ul>
         </div>
         <div class="philosophy-card"> <img src="/img/vision.jpg" alt="Visión" class="card-image">
             <h3>Visión</h3>
             <ul>
-                <li>Ser la empresa líder en limpieza profesional reconocida por su excelencia, innovación y compromiso con el bienestar de nuestros clientes.</li>
+                <li style="text-align: justify">Ser la empresa referente y líder en México en el suministro de equipamiento especializado, reconocida por nuestra excelencia operativa, la innovación constante en nuestras soluciones y el compromiso inquebrantable con la seguridad y bienestar de quienes protegen a nuestra nación.</li>
             </ul>
         </div>
         <div class="philosophy-card"> <img src="/img/valores.jpg" alt="Valores" class="card-image">
             <h3>Valores</h3>
             <ul>
-                <li>Innovación: Mejoramos continuamente nuestros procesos y soluciones.</li>
-                <li>Responsabilidad: Cumplimos con compromiso y seriedad cada tarea.</li>
-                <li>Calidad: Ofrecemos productos y servicios que superan las expectativas.</li>
-                <li>Confianza: Actuamos con honestidad y transparencia.</li>
-                <li>Sostenibilidad: Promovemos prácticas que cuidan el medio ambiente.</li>
+                <li>Excelencia: Superamos los estándares para tu seguridad.</li>
+                <li>Compromiso: Nuestra dedicación a tu protección es inquebrantable.</li>
+                <li>Innovación: Buscamos las mejores soluciones.</li>
+                <li>Transparencia: Operamos con total honestidad e integridad.</li>
+                <li>Responsabilidad social: Contribuimos al bienestar comunitario y al medio ambiente.</li>
             </ul>
         </div>
+    </div>
+</section>
+
+<section id="servicios" class="services-overview-section container" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="section-title-services text-center">SERVICIOS</h2>
+    <p class="services-intro text-center">En JEGUEN SOLUTION, somos su aliado estratégico en la provisión de equipamiento de protección personal, asegurando la seguridad y eficiencia de su personal en cualquier circunstancia. Nuestra oferta se distingue por la calidad superior, el cumplimiento normativo y la capacidad de adaptación a las necesidades más exigentes.</p>
+
+    <div class="swiper mySwiper services-carousel">
+        <div class="swiper-wrapper">
+            <a href="/proteccionCivil" class="swiper-slide service-slide">
+                <img src="/img/personalizacion.jpeg" alt="Personalización de equipamiento especializado" class="service-slide-img">
+                <div class="service-slide-overlay">
+                    <h3>Diseño y Personalización de Equipamiento Especializado</h3>
+                </div>
+            </a>
+            <a href="/proteccionCivil" class="swiper-slide service-slide">
+                <img src="/img/cascos.jpeg" alt="Equipamiento para protección de cabeza" class="service-slide-img">
+                <div class="service-slide-overlay">
+                    <h3>Equipamiento para Protección de Cabeza</h3>
+                </div>
+            </a>
+                        <a href="/proteccionCivil" class="swiper-slide service-slide">
+                <img src="/img/impermeable.jpeg" alt="impermeable" class="service-slide-img">
+                <div class="service-slide-overlay">
+                    <h3>Impermeables Tipo Poncho</h3>
+                </div>
+            </a>
+            <a href="/proteccionCivil" class="swiper-slide service-slide">
+                <img src="/img/chalecos.jpeg" alt="Chalecos" class="service-slide-img">
+                <div class="service-slide-overlay">
+                    <h3>Chalecos para Brigadistas</h3>
+                </div>
+            </a>
+            <a href="/proteccionCivil" class="swiper-slide service-slide">
+                <img src="/img/serigrafia.jpeg" alt="Servicio de Personalización Avanzada y Serigrafía Industrial" class="service-slide-img">
+                <div class="service-slide-overlay">
+                    <h3>Servicio de Personalización Avanzada y Serigrafía Industrial</h3>
+                </div>
+            </a>
+            <a href="/proteccionCivil" class="swiper-slide service-slide">
+                <img src="/img/guantes.jpg" alt="Guantes especializados para diferentes brigadas" class="service-slide-img">
+                <div class="service-slide-overlay">
+                    <h3>Guantes Especializados para Diferentes Brigadas</h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
 </section>
 

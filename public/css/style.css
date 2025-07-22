@@ -1,7 +1,7 @@
 /* --- Variables CSS --- */
 :root {
     --primary-color: #0E457A; /* Azul Jeguen */
-    --secondary-color: #0A8437; 
+    --secondary-color: #f49e13; 
     --text-color: #343a40;
     --light-text-color: #f8f9fa;
     --background-light: #f8f9fa;
@@ -240,9 +240,8 @@ ul {
 
 /* --- Contenido Principal --- */
 #main-content {
-    /* Ajustado: min-height considerando el nuevo padding-top del body */
-    min-height: calc(100vh - 200px); /* Restamos solo la altura del footer */
-    padding-top: 0; /* Eliminamos este padding aquí, ya que se maneja en el body */
+    min-height: calc(100vh - 200px); 
+    padding-top: 0; 
 }
 
 

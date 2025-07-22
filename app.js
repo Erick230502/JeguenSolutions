@@ -19,14 +19,19 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'INICIO | JEGUEN SOLUTIONS' });
 });
 
-// **Ruta corregida para la página de limpieza**
-// Ahora apunta a la subcarpeta 'servicios'
+// Acceso a las otras vistas
 app.get('/limpieza', (req, res) => {
     res.render('servicios/limpieza', { title: 'Limpieza | JEGUEN SOLUTIONS' });
 });
 
+app.get('/proteccionCivil', (req, res) => {
+    res.render('servicios/proteccionCivil', { title: 'EQUIPO DE PROTECCIÓN | JEGUEN SOLUTIONS' });
+});
+
+
 // Iniciar servidor
-const PORT = process.env.PORT || 3000; // O cualquier otro puerto por defecto para tu desarrollo local
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log('Abre tu navegador en: http://localhost:3000');
 });
