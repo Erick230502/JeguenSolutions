@@ -190,7 +190,7 @@
             <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
             <p>Sábado: 9:00 AM - 1:00 PM</p>
         </div>
-        <!-- Nueva sección para la imagen -->
+
         <div class="contact-image-area">
             <img src="/img/nosotros.jpg" alt="Imagen de Contacto Jeguen Solutions" class="contact-image">
         </div>
@@ -205,13 +205,13 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-// Asegúrate de que el DOM esté cargado antes de inicializar Swiper
+
 document.addEventListener('DOMContentLoaded', function() {
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1, // Muestra 1 slide por vista en móvil
-        spaceBetween: 30, // Espacio entre slides
-        loop: true, // Carrusel infinito
-        grabCursor: true, // Cambia el cursor para indicar que se puede arrastrar
+        slidesPerView: 1,
+        spaceBetween: 30, 
+        loop: true, 
+        grabCursor: true, 
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -221,30 +221,29 @@ document.addEventListener('DOMContentLoaded', function() {
             prevEl: ".swiper-button-prev",
         },
         autoplay: {
-            delay: 4000, // Cambia de slide cada 4 segundos
-            disableOnInteraction: false, // El autoplay no se detiene si el usuario interactúa
+            delay: 4000, 
+            disableOnInteraction: false, 
         },
         breakpoints: {
-            // Cuando la pantalla sea >= 768px
             768: {
-                slidesPerView: 3, // Muestra 3 slides por vista
+                slidesPerView: 3, 
                 spaceBetween: 30,
             },
-            // Cuando la pantalla sea >= 1024px
+
             1024: {
-                slidesPerView: 4, // Muestra 4 slides por vista
+                slidesPerView: 4, 
                 spaceBetween: 40,
             },
-            // Cuando la pantalla sea >= 1200px
+
             1200: {
-                slidesPerView: 5, // Muestra 5 slides por vista
+                slidesPerView: 5, 
                 spaceBetween: 50,
             }
         },
-        // Integración con AOS
+
         on: {
             slideChangeTransitionEnd: function () {
-                AOS.refresh(); // Refresca AOS después de cada transición de slide
+                AOS.refresh(); 
             }
         }
     });
