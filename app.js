@@ -24,8 +24,8 @@ app.get('/limpieza', (req, res) => {
     res.render('servicios/limpieza', { title: 'Limpieza | JEGUEN SOLUTIONS' });
 });
 
-app.get('/proteccionCivil', (req, res) => {
-    res.render('servicios/proteccionCivil', { title: 'EQUIPO DE PROTECCIÓN | JEGUEN SOLUTIONS' });
+app.get('/details', (req, res) => {
+    res.render('servicios/details', { title: 'EQUIPO DE PROTECCIÓN | JEGUEN SOLUTIONS' });
 });
 
 
