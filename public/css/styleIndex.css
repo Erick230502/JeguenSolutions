@@ -94,9 +94,9 @@
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     margin-bottom: 0.2rem;
-    margin-top: 0; 
+    margin-top: 11rem; 
     color: var(--light-text-color);
     font-weight: 450;
     text-transform: uppercase;
